@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #f106aa;
+    --hover-primary: #737373;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #E5E5E5;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 70%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.logo img {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 12px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav button {
+    padding: 7px 18px;
+    border-radius: 4px;
+    background-color: #cacaca;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background-color: var(--hover-primary);
+    color: #fff;
+}
+
+
+.hero-section {
+    width: 80%;
+    margin: 0 auto;
+    background-image: url("./images/bannerBG.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section .hero-content {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.hero-section .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-section.hero-content.hero-left-child h1{
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(180deg #F94882 , #8758f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section .hero-content .hero-left-child,
+.hero-section.hero-content.hero-right-child{
+
+    width: 50%;
+    height: auto;
+}
+ .hero-cta-buttons{
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+
+ }
+
+ .nav button{
+    background-color: var(--primary-color);
+    color: #fff;
+ }
+ 
