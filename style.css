@@ -82,6 +82,10 @@ nav button:hover {
     background-color: var(--hover-primary);
     color: #fff;
 }
+nav button{
+    background-color: var(--primary-color);
+    color: #fff;
+ }
 
 
 .hero-section {
@@ -93,28 +97,29 @@ nav button:hover {
     background-repeat: no-repeat;
 }
 
-.hero-section .hero-content {
+.hero-section .hero-container {
     width: 88%;
     margin: 0 auto;
 }
 
-.hero-section .hero-content {
+.hero-section .hero-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.hero-section.hero-content.hero-left-child h1{
+.hero-section .hero-container .hero-left-class h1{
     font-size: 50px;
     font-weight: bold;
-    background: linear-gradient(180deg #F94882 , #8758f1);
+    background: linear-gradient(180deg, #F94882 , #8758f1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
-.hero-section .hero-content .hero-left-child,
-.hero-section.hero-content.hero-right-child{
+.hero-section .hero-container .hero-left-class,
+.hero-section .hero-container .hero-right-class{
 
     width: 50%;
     height: auto;
@@ -129,8 +134,8 @@ nav button:hover {
 
  }
 
- .nav button{
-    background-color: var(--primary-color);
-    color: #fff;
+ .hero-section .hero-container .hero-right-class img{
+   
+    width: 500px;
+    
  }
- 
