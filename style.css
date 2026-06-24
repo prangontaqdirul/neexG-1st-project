@@ -11,6 +11,7 @@ body {
     background: #E5E5E5;
     margin: 0 auto;
     max-width: 1366px;
+    overflow-x: hidden; /* স্ক্রিনের বাইরে কন্টেন্ট যাওয়া রোধ করতে */
 }
 
 ul {
@@ -18,12 +19,12 @@ ul {
 }
 
 .container {
-    width: 70%;
+    width: 85%;
     max-width: 1280px;
     margin: 0 auto;
 }
 
-
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -74,7 +75,8 @@ nav ul li a:hover {
 nav button {
     padding: 7px 18px;
     border-radius: 4px;
-    background-color: #cacaca;
+    background-color: #e25757;
+    color: #fff;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -82,307 +84,434 @@ nav button {
 
 nav button:hover {
     background-color: var(--hover-primary);
-    color: #fff;
 }
-nav button{
-    background-color: #e25757;
-    color: #fff;
- }
 
-
+/* Hero Section */
 .hero-section {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     background-image: url("./images/bannerBG.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
 .hero-section .hero-container {
-    width: 88%;
+    width: 90%;
     margin: 0 auto;
-}
-
-.hero-section .hero-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.hero-section .hero-container .hero-left-class h1{
-    font-size: 50px;
-    font-weight: bold;
-    background: linear-gradient(180deg, #F94882 , #8758f1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    gap: 20px;
+    padding: 40px 0;
 }
 
 .hero-section .hero-container .hero-left-class,
-.hero-section .hero-container .hero-right-class{
-
+.hero-section .hero-container .hero-right-class {
     width: 50%;
-    height: auto;
 }
- .hero-cta-buttons button{
-   font-size: 16px;
+
+.hero-section .hero-container .hero-left-class h1 {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #F94882, #8758f1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section .hero-container .hero-left-class ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hero-section .hero-container .hero-left-class ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-cta-buttons button {
+    font-size: 16px;
     font-weight: 400;
-    color: #ffffff;
+    color: #c14886;
     text-transform: uppercase;
     border-radius: 30px;
     padding: 12px 30px;
-   background: #ccc;
-    color: #000;;
-    color: #000;
-
- }
-
-.hero-section .hero-container .hero-left-class .hero-cta-buttons:hover{
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #c14886;
+    background: transparent;
+    transition: 0.3s;
     cursor: pointer;
-    color: var(--primary-color);
- }
-
- .hero-section .hero-container .hero-right-class img{
-   
-    width: 500px;
-    
- }
-
-.online-game{
-    width: 85%;
-    margin: 100px auto;
 }
-#online-game h2{
+
+.hero-cta-buttons button:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.hero-section .hero-container .hero-right-class img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Online Games Section */
+#online-game {
+    width: 85%;
+    margin: 80px auto;
+}
+
+#online-game h2 {
     text-align: center;
     font-size: 35px;
 }
 
-.coloring-half{
+.coloring-half {
     background: linear-gradient(180deg, #F94882 0%, #8758f1 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-#online-game .game-disc{
+
+#online-game .game-disc {
     text-align: center;
     margin: 10px 0 0;
 }
-#online-game .game-cards{
+
+#online-game .game-cards {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
-#online-game .game-cards .cards{
+#online-game .game-cards .cards {
     width: 23%;
 }
 
-#online-game .game-cards .cards img{
+#online-game .game-cards .cards img {
     width: 100%;
+    border-radius: 8px;
 }
 
-#online-game .game-cards .cards p{
+#online-game .game-cards .cards p {
     font-size: 14px;
     margin-top: 8px;
 }
 
-#third-part{
+/* Third Part Section */
+#third-part {
     width: 85%;
-    margin: 0 auto;
+    margin: 80px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
-#third-part .third-part-content{
+#third-part .third-part-content {
     width: 50%;
 }
 
-#third-part .third-part-content h2{
-   font-size: 50px;
-    font-weight: bold;
-
-}
-
-#third-part .third-part-content .styled-half{
+#third-part .third-part-content h2 {
     font-size: 50px;
     font-weight: bold;
-    background: linear-gradient(180deg, #F94882 , #8758f1);
+    line-height: 1.2;
+}
+
+#third-part .third-part-content .styled-half {
+    background: linear-gradient(180deg, #F94882, #8758f1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
-#third-part .third-part-content p{
-    text-align: right;
-    width: 70%;
-    margin: 0 0 0 30%;
+#third-part .third-part-content p {
+    text-align: left;
+    width: 90%;
     line-height: 24px;
-    font-weight: bold;
+    font-weight: normal;
+    margin-top: 15px;
 }
 
-#third-part .third-part-img{
-    width: 40%;
-    
-}
-
-#third-part .third-part-img .third-main-pic{
-    width: 100%;
-}
-
-#third-part .third-part-img .third-secendory-pic{
-    width: 40%;
+#third-part .third-part-img {
+    width: 50%;
     position: relative;
-    top: -140px;
-    left: -60px;
-    
 }
 
-#games{
+#third-part .third-part-img .main-pic {
+    width: 100%;
+    display: block;
+}
+
+#third-part .third-part-img .secendory-pic {
+    width: 40%;
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+}
+
+/* Games Categories Section */
+#games {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0 100px;
+    padding: 60px 0;
     background: #a89999;
+    margin-top: 70px;
 }
 
-#games .all-games{
-
-    width: 80%;
+#games .all-games {
+    width: 85%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
     justify-content: center;
-    list-style: none;
-    gap: 30px;
+    gap: 15px;
 }
 
-#games .all-games li{
-    padding: 8px 10px;
+#games .all-games li {
+    padding: 8px 16px;
     transition: 0.3s;
     background: #e9dede;
     border-radius: 50px;
 }
 
-#games .all-games li a{
+#games .all-games li a {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 600;
     color: #000;
-    font-size: 10px;
+    font-size: 14px;
 }
 
-#games .all-games li a img{
+#games .all-games li a img {
     width: 25px;
     height: 20px;
     margin-right: 10px;
 }
 
-#games .all-games li :hover{
+#games .all-games li:hover {
     border: 1px solid #dc74aa;
+    background: #fff;
 }
 
-#games .all-games li:hover a{
-   color:#dc74aa;
+#games .all-games li:hover a {
+    color: #dc74aa;
 }
 
-footer{
-    min-height: 400px;
+/* Footer Section */
+footer {
+    padding: 60px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     background: #8b7ea9;
 }
 
-footer .first-footer .footer-logo{
+footer .first-footer {
+    width: 100%;
+    max-width: 800px;
+}
+
+footer .first-footer .footer-logo {
     text-align: center;
     display: flex;
     gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
+    align-items: center;
 }
 
-footer .first-footer .footer-logo img{
+footer .first-footer .footer-logo img {
     width: 60px;
     height: 30px;
-
 }
 
-footer .first-footer .footer-logo h2{
+footer .first-footer .footer-logo h2 {
     color: #fff;
 }
 
-footer .first-footer .footer-logo span{
+footer .first-footer .footer-logo h2 span {
     color: var(--primary-color);
 }
 
-footer .our-facelity{
+footer .our-facelity {
     display: flex;
+    justify-content: center;
     gap: 20px;
     margin: 20px 0;
-    list-style: none;
+    flex-wrap: wrap;
 }
 
-footer .our-facelity li a{
+footer .our-facelity li a {
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
-
+    font-size: 16px;
 }
 
-footer .our-facelity li a:hover{
-    cursor: pointer;
+footer .our-facelity li a:hover {
     color: #F94882;
 }
 
-footer .social-link ul{
- display: flex;
- gap: 30px;
- justify-content: center;
- 
-}
-
-footer .our-facelity ul li a{
-    text-decoration: none;
-
-    color: #fff;
-    transition: 0.3s;
-    font-size: 20px;
-}
-
-footer .our-facelity ul li a:hover{
-    cursor: pointer;
-    color: #f106aa;
-
-}
-
-footer .another-links li{
+footer .social-link ul {
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin: 20px 0;
-    list-style: none;
+    margin: 25px 0;
 }
 
-footer .another-links ul li a{
-    text-decoration: none;
-    color: #915050;
+footer .social-link ul li a {
+    color: #fff;
+    font-size: 24px;
     transition: 0.3s;
 }
 
-footer .another-links ul li a:hover{
-    cursor: pointer;
+footer .social-link ul li a:hover {
+    color: var(--primary-color);
+}
+
+footer .another-links ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+footer .another-links ul li a {
+    text-decoration: none;
+    color: #e2d9f3;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+footer .another-links ul li a:hover {
     color: #F94882;
 }
 
-footer .churi p{
-text-align: center;
-color: #fff;
+footer .churi p {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (MEDIA QUERIES)
+   ========================================== */
+
+/* ট্যাবলেট ডিভাইসের জন্য (Tablets - Max 992px) */
+@media screen and (max-width: 992px) {
+    .container, .hero-section, #online-game, #third-part {
+        width: 90%;
+    }
+
+    .hero-section .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section .hero-container .hero-left-class,
+    .hero-section .hero-container .hero-right-class {
+        width: 100%;
+    }
+
+    .hero-section .hero-container .hero-left-class ul {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .hero-section .hero-container .hero-right-class img {
+        max-width: 400px;
+        margin-top: 30px;
+    }
+
+    #online-game .game-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #online-game .game-cards .cards {
+        width: 45%; /* এক লাইনে ২টি করে কার্ড আসবে */
+        margin-bottom: 20px;
+    }
+
+    #third-part {
+        flex-direction: column-reverse; /* ইমেজ উপরে, টেক্সট নিচে যাবে */
+        text-align: center;
+    }
+
+    #third-part .third-part-content,
+    #third-part .third-part-img {
+        width: 100%;
+    }
+
+    #third-part .third-part-content p {
+        width: 100%;
+    }
+
+    #third-part .third-part-img .secendory-pic {
+        bottom: -20px;
+        left: 0px;
+    }
+}
+
+/* মোবাইল ডিভাইসের জন্য (Mobile Phones - Max 768px) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .hero-section .hero-container .hero-left-class h1 {
+        font-size: 38px;
+    }
+
+    #online-game h2 {
+        font-size: 28px;
+    }
+
+    #online-game .game-cards .cards {
+        width: 100%; /* মোবাইলে এক লাইনে ১টি করে কার্ড পুরো জায়গা জুড়ে থাকবে */
+    }
+
+    #third-part .third-part-content h2 {
+        font-size: 32px;
+    }
+
+    #third-part .third-part-img .secendory-pic {
+        position: relative;
+        width: 40%;
+        left: 0;
+        bottom: 0;
+        margin-top: -50px;
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    footer .our-facelity, 
+    footer .another-links ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
 }
